@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thahaseen.showcart.CartActivity">
+    <LinearLayout
+        android:id="@+id/listHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="@dimen/padding_top"
+        android:paddingBottom="@dimen/padding_bottom"
+        android:orientation="horizontal"
+        android:background="@color/listView_header_bg">
+        <TextView
+            android:id="@+id/txtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/id" />
+        <TextView
+            android:id="@+id/txtProdName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/name" />
+        <TextView
+            android:id="@+id/txtProdPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/price" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listViewCart"
+        android:layout_below="@+id/listHeader"
+        android:layout_above="@+id/txtLocationCoordinates"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_bottom"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:dividerHeight="1dp"
+        android:divider="@color/listView_divider"/>
+    <TextView
+        android:id="@+id/txtLocationCoordinates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:background="@color/listView_header_bg"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light" />
+</RelativeLayout>
